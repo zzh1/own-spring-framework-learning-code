@@ -1,4 +1,10 @@
 package com.linkedbear.spring.basic_dl.d_withanno.anno;
 
-public @interface Color {
+
+import java.lang.annotation.*;
+
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface Color  {
 }

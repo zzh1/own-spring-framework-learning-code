@@ -1,4 +1,6 @@
 package com.linkedbear.spring.basic_dl.c_oftype.dao.impl;
 
-public class DemoPostgreDao {
+import com.linkedbear.spring.basic_dl.c_oftype.dao.DemoDao;
+
+public class DemoPostgreDao implements DemoDao {
 }
