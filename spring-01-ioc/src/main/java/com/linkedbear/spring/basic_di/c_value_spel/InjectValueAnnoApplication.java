@@ -2,6 +2,7 @@ package com.linkedbear.spring.basic_di.c_value_spel;
 
 import com.linkedbear.spring.basic_di.c_value_spel.bean.Black;
 import com.linkedbear.spring.basic_di.c_value_spel.bean.Blue;
+import com.linkedbear.spring.basic_di.c_value_spel.bean.Green;
 import com.linkedbear.spring.basic_di.c_value_spel.bean.Red;
 import com.linkedbear.spring.basic_di.c_value_spel.config.InjectValueConfiguration;
 import org.springframework.context.ApplicationContext;
@@ -21,6 +22,9 @@ public class InjectValueAnnoApplication {
 
         Blue blue = ctx.getBean(Blue.class);
         System.out.println("use spel : " + blue);
+
+        Green green = ctx.getBean(Green.class);
+        System.out.println("use spel bean property : "+ green);
 
     }
 
