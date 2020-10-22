@@ -3,7 +3,7 @@ package com.linkedbear.spring.basic_di.c_value_spel.bean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class White {
 
     @Value("#{blue.name.substring(0,3)}")
