@@ -1,11 +1,10 @@
 package com.linkedbear.spring.basic_di.d_autowired.bean;
 
-import org.springframework.stereotype.Component;
+public class Cat {
 
-@Component("administrator")
-public class Person  {
+    private String name;
 
-    private String name="administrator";
+    private Person person;
 
     public String getName() {
         return name;
@@ -15,10 +14,19 @@ public class Person  {
         this.name = name;
     }
 
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
     @Override
     public String toString() {
-        return "Person{" +
+        return "Cat{" +
                 "name='" + name + '\'' +
+                ", person=" + person +
                 '}';
     }
 }
