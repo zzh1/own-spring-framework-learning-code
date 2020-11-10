@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component("administrator")
 public class Person  {
 
-    private String name="administrator";
+    private String name="administrator222";
 
     public String getName() {
         return name;

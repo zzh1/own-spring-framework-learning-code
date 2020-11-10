@@ -9,13 +9,16 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 class InjectComplexFieldAnnoApplication {
 
     public static void main(String[] args)  throws  Exception{
-        ApplicationContext ctx = new AnnotationConfigApplicationContext("com.linkedbear.spring.basic_di.d_autowired.bean");
-        Dog dog = ctx.getBean(Dog.class);
-        System.out.println(dog);
+//        ApplicationContext ctx = new AnnotationConfigApplicationContext("com.linkedbear.spring.basic_di.d_autowired.bean");
+//        Dog dog = ctx.getBean(Dog.class);
+//        System.out.println(dog);
 
         ApplicationContext ctx2 = new AnnotationConfigApplicationContext(InjectComplexFieldConfiguration.class);
-        Cat cat = ctx2.getBean(Cat.class);
-        System.out.println(cat);
+//        Cat cat = ctx2.getBean(Cat.class);
+//        System.out.println(cat);
+
+        Dog dog = ctx2.getBean(Dog.class);
+        System.out.println(dog);
 
 
     }

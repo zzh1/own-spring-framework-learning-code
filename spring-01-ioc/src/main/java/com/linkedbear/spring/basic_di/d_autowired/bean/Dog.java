@@ -1,6 +1,7 @@
 package com.linkedbear.spring.basic_di.d_autowired.bean;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +13,10 @@ public class Dog {
 
     //将person注入dog-属性注入
     @Autowired(required = false)
-    private Person person;
+    //解决方案一：在Autowired下面加上Qualifier
+//    @Qualifier("administrator")
+//    private Person person;
+    private Person master;
 
     //构造器注入
 //    @Autowired
@@ -29,20 +33,20 @@ public class Dog {
     }
 
     public Person getPerson() {
-        return person;
+        return master;
     }
 
     //setter注入
 //    @Autowired
     public void setPerson(Person person) {
-        this.person = person;
+        this.master = person;
     }
 
     @Override
     public String toString() {
         return "Dog{" +
                 "name='" + name + '\'' +
-                ", person=" + person +
+                ", person=" + master +
                 '}';
     }
 }
