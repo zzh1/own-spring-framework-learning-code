@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class Dog {
 
@@ -12,17 +14,15 @@ public class Dog {
     private String name;
 
     //将person注入dog-属性注入
-    @Autowired(required = false)
+//    @Autowired(required = false)
     //解决方案一：在Autowired下面加上Qualifier
 //    @Qualifier("administrator")
 //    private Person person;
-    private Person master;
+//    private Person master;
 
-    //构造器注入
-//    @Autowired
-//    public Dog(Person person) {
-//        this.person = person;
-//    }
+    //一组bean的全部注入
+    @Autowired
+    private List<Person> persons;
 
     public String getName() {
         return name;
@@ -32,21 +32,39 @@ public class Dog {
         this.name = name;
     }
 
-    public Person getPerson() {
-        return master;
+    public List<Person> getPersons() {
+        return persons;
     }
 
-    //setter注入
-//    @Autowired
-    public void setPerson(Person person) {
-        this.master = person;
+    public void setPersons(List<Person> persons) {
+        this.persons = persons;
     }
 
     @Override
     public String toString() {
         return "Dog{" +
                 "name='" + name + '\'' +
-                ", person=" + master +
+                ", persons=" + persons +
                 '}';
     }
+
+    //构造器注入
+//    @Autowired
+//    public Dog(Person person) {
+//        this.person = person;
+//    }
+
+//    //setter注入
+////    @Autowired
+//    public void setPerson(Person person) {
+//        this.master = person;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Dog{" +
+//                "name='" + name + '\'' +
+//                ", person=" + master +
+//                '}';
+//    }
 }
