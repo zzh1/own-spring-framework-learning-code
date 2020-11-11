@@ -10,6 +10,8 @@ public class AwareApplication {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AwaredTestBean.class);
         AwaredTestBean bbb = ctx.getBean(AwaredTestBean.class);
         bbb.printBeanNames();
+        System.out.println("------");
+        System.out.println(bbb.getName());
 
     }
 
