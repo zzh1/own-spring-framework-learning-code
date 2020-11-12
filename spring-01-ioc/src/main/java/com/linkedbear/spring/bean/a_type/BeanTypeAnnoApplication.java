@@ -14,12 +14,12 @@ public class BeanTypeAnnoApplication {
 
         ApplicationContext ctx = new AnnotationConfigApplicationContext(BeanTypeConfiguration.class);
 
-        Map<String,Toy> toys = ctx.getBeansOfType(Toy.class);
-        toys.forEach((name,toy)->{
-            System.out.println("toy name : " + name +","+toy.toString());
-        });
+//        Map<String,Toy> toys = ctx.getBeansOfType(Toy.class);
+//        toys.forEach((name,toy)->{
+//            System.out.println("toy name : " + name +","+toy.toString());
+//        });
 
-//        Toy toy = ctx.getBean(Toy.class);
+        Toy toy = ctx.getBean(Toy.class);
 //        System.out.println(toy);
 
     }

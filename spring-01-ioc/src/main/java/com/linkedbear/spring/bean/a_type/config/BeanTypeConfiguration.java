@@ -15,10 +15,10 @@ public class BeanTypeConfiguration {
         return new Child();
     }
 
-    @Bean
-    public Toy ball(){
-        return new Ball("ball");
-    }
+//    @Bean
+//    public Toy ball(){
+//        return new Ball("ball");
+//    }
 
     @Bean
     public ToyFactoryBean toyFactory() {
