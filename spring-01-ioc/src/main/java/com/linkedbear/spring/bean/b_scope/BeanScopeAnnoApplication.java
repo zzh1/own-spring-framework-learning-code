@@ -9,10 +9,13 @@ public class BeanScopeAnnoApplication {
 
     public static void main(String[] args) throws Exception{
 
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(BeanScopeConfiguration.class);
-        ctx.getBeansOfType(Child.class).forEach((name,child)->{
-            System.out.println(name+":"+child);
-        });
+//        ApplicationContext ctx = new AnnotationConfigApplicationContext(BeanScopeConfiguration.class);
+//        ctx.getBeansOfType(Child.class).forEach((name,child)->{
+//            System.out.println(name+":"+child);
+//        });
+
+        ApplicationContext ctx = new AnnotationConfigApplicationContext("com.linkedbear.spring.bean.b_scope.bean");
+
 
     }
 
