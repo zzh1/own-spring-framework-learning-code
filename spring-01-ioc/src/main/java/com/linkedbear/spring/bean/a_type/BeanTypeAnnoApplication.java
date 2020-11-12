@@ -19,8 +19,9 @@ public class BeanTypeAnnoApplication {
 //            System.out.println("toy name : " + name +","+toy.toString());
 //        });
 
-        Toy toy = ctx.getBean(Toy.class);
-//        System.out.println(toy);
+        Toy toy1 = ctx.getBean(Toy.class);
+        Toy toy2 = ctx.getBean(Toy.class);
+        System.out.println(toy1==toy2);
 
     }
 
