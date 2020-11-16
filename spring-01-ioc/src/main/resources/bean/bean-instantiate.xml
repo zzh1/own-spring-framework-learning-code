@@ -5,4 +5,8 @@
 
     <bean class="com.linkedbear.spring.bean.c_instantiate.bean.BallFactoryBean"/>
 
+    <bean id="car1" class="com.linkedbear.spring.bean.c_instantiate.bean.Car"/>
+
+    <bean id="car2" class="com.linkedbear.spring.bean.c_instantiate.bean.CarStaticFactory" factory-method="getCar"/>
+
 </beans>
