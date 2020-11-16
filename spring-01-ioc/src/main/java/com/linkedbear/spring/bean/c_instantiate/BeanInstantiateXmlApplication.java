@@ -19,7 +19,9 @@ public class BeanInstantiateXmlApplication {
         });
 
         //尝试取一下静态工厂本身
-        System.out.println(ctx.getBean(CarStaticFactory.class));
+//        System.out.println(ctx.getBean(CarStaticFactory.class));
+
+
 
     }
 
