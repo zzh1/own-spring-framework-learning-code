@@ -9,4 +9,8 @@
 
     <bean id="car2" class="com.linkedbear.spring.bean.c_instantiate.bean.CarStaticFactory" factory-method="getCar"/>
 
+    <bean id="carInstanceFactory" class="com.linkedbear.spring.bean.c_instantiate.bean.CarInstanceFactory"/>
+    <bean id="car3" factory-bean="carInstanceFactory" factory-method="getCar"/>
+
+
 </beans>
